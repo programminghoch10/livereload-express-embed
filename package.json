@@ -1,0 +1,40 @@
+{
+  "name": "livereload-express-embed",
+  "version": "1.0.0",
+  "description": "Embed LiveReload.js directly into an Express Server",
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "npm run build"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/programminghoch10/livereload-express-embed.git"
+  },
+  "keywords": [
+    "livereload",
+    "express"
+  ],
+  "author": "programminghoch10",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/programminghoch10/livereload-express-embed/issues"
+  },
+  "homepage": "https://github.com/programminghoch10/livereload-express-embed#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "livereload": "^0.9.3",
+    "livereload-js": "^4.0.2",
+    "connect-livereload": "^0.6.1",
+    "ws": "^8.18.0",
+    "@types/livereload": "^0.9.5"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "typescript": "^5.7.3",
+    "@types/livereload": "^0.9.5",
+    "@types/connect-livereload": "^0.6.3",
+    "@types/node": "^22.10.5"
+  }
+}
