@@ -15,8 +15,10 @@ export function embedLiveReload(app: Router, httpServer: Server) {
   liveReloadServer.server.on('connection', liveReloadServer.onConnection.bind(liveReloadServer))
   liveReloadServer.server.on('close', liveReloadServer.onClose.bind(liveReloadServer))
   liveReloadServer.server.on('error', liveReloadServer.onError.bind(liveReloadServer))
-  liveReloadServer.once("connection", () => {
-    liveReloadServer.refresh("/")
+  liveReloadServer.server.once("connection", () => {
+    setTimeout(() => {
+      liveReloadServer.refresh('/')
+    }, 100)
   })
   app.use(livereload({
     port: (httpServer.address() as AddressInfo).port,
